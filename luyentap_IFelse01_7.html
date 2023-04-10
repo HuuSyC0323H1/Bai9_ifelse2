@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap" placeholder="nhap so phut">
+<button onclick="tinhtien()">Tinh tien</button>
+<h2>Gia:<span id="hienthi"></span></h2>
+</body>
+</html>
+<script>
+    function tinhtien(){
+        let sophut;
+        let phicodinh = 22000;
+        let phi1;
+        let phi;
+        sophut = document.getElementById("nhap").value;
+        if (sophut<50 && sophut>0){
+            phi=phicodinh+sophut*800;
+            document.getElementById("hienthi").innerText=phi;
+        }else if (50<sophut<100){
+            phi=phicodinh+sophut*1200;
+            document.getElementById("hienthi").innerText=phi;
+        }else {
+            phi = phicodinh + sophut * 1500;
+            document.getElementById("hienthi").innerText=phi;
+        }
+    }
+  </script>
